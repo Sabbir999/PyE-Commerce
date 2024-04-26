@@ -25,7 +25,7 @@ class Product(models.Model):
   vendor=models.CharField(max_length=150,null=False,blank=False)
   product_image=models.ImageField(upload_to=getFileName,null=True,blank=True)
   quantity=models.IntegerField(null=False,blank=False)
-  original_price=models.FloatField(null=False,blank=False)
+  original_price=models.FloatField(null=True,blank=True)
   selling_price=models.FloatField(null=False,blank=False)
   description=models.TextField(max_length=500,null=False,blank=False)
   status=models.BooleanField(default=False,help_text="0-show,1-Hidden")
