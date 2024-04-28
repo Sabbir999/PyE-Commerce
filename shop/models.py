@@ -1,3 +1,39 @@
+"""
+Django Models for Online Shopping Application:
+
+Catagory Model:
+- Represents a product category with fields for name, image, description, status, and creation timestamp.
+- Uses an ImageField for storing category images, with a custom upload path function (`getFileName`).
+- Provides a string representation (`__str__`) for the category name.
+
+Product Model:
+- Represents a product with fields related to its category, name, vendor, image, quantity, prices, description, status, trending status, and creation timestamp.
+- Utilizes ForeignKey to link to the Category model.
+- Includes ImageField for storing product images, with a custom upload path function (`getFileName`).
+- Defines a string representation (`__str__`) for the product name.
+
+Cart Model:
+- Represents a user's cart item with fields for the user, associated product, quantity, and creation timestamp.
+- Uses ForeignKey to link to the User and Product models.
+- Includes a property (`total_cost`) to calculate the total cost of items in the cart.
+
+Favourite Model:
+- Represents a user's favorite product with fields for the user, associated product, and creation timestamp.
+- Uses ForeignKey to link to the User and Product models.
+
+Functionality:
+- The `getFileName` function generates a unique filename for uploaded images based on the current timestamp.
+- Django models define relationships (ForeignKey) between entities and include field types for various data types (CharField, ImageField, IntegerField, FloatField, TextField, BooleanField, DateTimeField).
+- Custom string representations (`__str__`) are provided for each model to improve readability in Django admin and other contexts.
+
+Usage:
+- Integrate these models into a Django project to manage product categories, products, user carts, and favorites.
+- Configure Django admin to interact with and manage these models via the Django admin interface.
+- Customize model fields and behaviors as needed based on specific project requirements.
+
+
+"""
+
 from itertools import product
 from django.db import models
 from django.contrib.auth.models import User

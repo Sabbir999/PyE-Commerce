@@ -9,11 +9,16 @@ body, html {
 
 /* Set full height for the body */
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
-  justify-content: space-between; /* Aligns content vertically */
-  min-height: 100vh; /* Minimum height of viewport */
-  font-family: 'Noto Sans', sans-serif; /* Default font family */
+  justify-content: space-between;
+  min-height: 100vh;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 /* Navbar styles */

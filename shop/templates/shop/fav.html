@@ -1,3 +1,18 @@
+<!--
+  This template extends the 'shop/layouts/main.html' template and customizes the title to display "Registration | Sportmart".
+
+  It defines a section within a container with a light background and minimum height of 600px. Inside this section:
+  - It starts with a row containing a heading "Favourite Item" and a horizontal line.
+  - It then presents a table to display each favorite item fetched from the 'fav' queryset.
+    - Each row in the table represents a favorite item and includes:
+      - An image displayed with a height of 75px.
+      - The product name.
+      - The selling price formatted as a dollar amount.
+      - A "Remove" button linked to the 'remove_fav' URL for removing the item, with a confirmation dialog triggered on click.
+
+  This template utilizes Django template language (DTL) to dynamically render data and handle user interactions for managing favorite items.
+-->
+
 {% extends 'shop/layouts/main.html' %}
 {% block title %}
   Registration | Sportmart
@@ -15,7 +30,7 @@
             <tr>
                 <th>Image</th>
                 <th>Product Name</th>
-                <th>Unit</th>
+                <th>Price</th>
                 <th>Remove</th>
             </tr>
           
@@ -24,7 +39,7 @@
            <tr>
               <td><img src="{{item.product.product_image.url}}" height="75px" alt="{{item.product.name}}"></td>
               <td>{{item.product.name}}</td>
-              <td>{{item.product.selling_price | stringformat:'d'}}</td>
+              <td>${{item.product.selling_price | stringformat:'d'}}</td>
               <td><a href="{% url 'remove_fav' item.id %}"  onclick="return confirm('Are you sure? to Remove')"  class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Remove</a></td>
             </tr>
             {% endfor %}

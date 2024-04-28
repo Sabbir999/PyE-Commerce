@@ -1,3 +1,37 @@
+"""
+Django View Functions Summary:
+
+1. home(request):
+   - Renders the 'shop/index.html' template with trending products.
+   
+2. favviewpage(request):
+   - Renders 'shop/fav.html' with the user's favorite products if authenticated.
+
+3. remove_fav(request, fid):
+   - Deletes a favorite item (Favourite object) based on the given fid.
+   
+4. cart_page(request):
+   - Renders 'shop/cart.html' with the user's cart items if authenticated.
+
+5. remove_cart(request, cid):
+   - Deletes a cart item (Cart object) based on the given cid.
+
+6. fav_page(request):
+   - Handles AJAX requests to add products to user's favorites.
+
+7. add_to_cart(request):
+   - Handles AJAX requests to add products to user's cart.
+
+8. logout_page(request):
+   - Logs out the authenticated user and redirects to the root URL.
+
+9. login_page(request):
+   - Manages user login functionality, authenticating user credentials.
+
+10. register(request):
+    - Handles user registration, displaying and processing registration form.
+"""
+
 from django.http import  JsonResponse
 from django.shortcuts import redirect, render
 from shop.form import CustomUserForm
