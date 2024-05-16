@@ -1,0 +1,102 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap');
+
+/* Reset default margin and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set full height for the body */
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #ffffff; /* Navbar background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Navbar shadow */
+}
+
+/* Main content container */
+main {
+  flex: 1; /* Allow main content to grow */
+  padding: 20px; /* Padding around main content */
+}
+
+/* Hyperlink styles */
+a {
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Default text color */
+  transition: text-shadow 0.3s ease; /* Add transition effect for text-shadow */
+}
+
+/* Create glowing effect on hover */
+a:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* White glow effect */
+  color: #007bff; /* Change text color on hover */
+}
+
+/* Footer styles */
+footer {
+  background-color: #f8f9fa; /* Footer background color */
+  padding: 1px; /* Padding inside the footer */
+  text-align: center; /* Center-align footer content */
+  margin-top: auto; /* Push footer to the bottom */
+}
+
+/* Additional styles for specific elements */
+
+/* Carousel image styles */
+.carousel-item img {
+  object-fit: cover;
+  object-position: top;
+  height: 60vh; /* Set height of carousel images */
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Old price styles */
+.old_price {
+  font-weight: bold;
+  color: red;
+}
+
+/* New price styles */
+.new_price {
+  font-weight: bold;
+  background-color: green;
+  color: white;
+  padding: 2px;
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
+
+/* Product box container */
+.pic-box {
+  position: relative;
+}
+
+/* Hot label styles */
+.hot {
+  background-color: orangered;
+  color: white;
+  width: 50px;
+  text-align: center;
+  font-weight: bold;
+  display: inline;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  z-index: 10;
+}
