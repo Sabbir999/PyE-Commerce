@@ -1,27 +1,38 @@
-# PyE-Commerce
-To run this project, follow these steps:
-1. Set Up Python Environment
-   Ensure you have Python installed on your system. Django requires Python 3.6 or later.
+🛍️ PyE-Commerce — Django-Based Online Store Platform
 
-2. Install Django
-   Install Django using pip: pip install django
+Overview:
+PyE-Commerce is a full-featured e-commerce web application built with Python and Django, designed to provide a seamless online shopping experience. The project follows a modular architecture that supports product management, user authentication, cart functionality, and order processing, with admin control through Django’s built-in dashboard.
 
-3. Install Project Dependencies
+Key Features:
 
-4. Set Up Database
-   Configure the database settings in settings.py (default is mySQL) or use other supported databases like PostgreSQL, MySQL, etc
-   Migrating Data for this project,
-   Update Django models (models.py) to reflect the desired changes. Use Django's migration system (makemigrations and migrate) to apply these changes to the database schema.
-   Then use this command: python manage.py makemigrations
-                          python manage.py migrate
+🧾 User Authentication: Secure registration, login, and session management for customers and admins.
 
+🛒 Product Management: Add, update, delete, and view products with category filters.
 
-5. Create a Superuser (Admin)
-   Create a superuser to access the Django admin interface: python manage.py createsuperuser
+💳 Shopping Cart & Checkout: Real-time cart updates and order placement.
 
-6. Run the Development Server
-   Start the Django development server: python manage.py runserver
-   The server will start at http://127.0.0.1:8000/ by default
+📦 Admin Panel: Manage inventory, orders, and users through Django’s admin interface.
 
-7. Run Tests
-   To run tests for this Django project: python manage.py test
+🗄️ Database Support: Configurable database setup using MySQL or PostgreSQL.
+
+🧪 Testing Support: Built-in Django test suite for application validation and reliability.
+
+Tech Stack:
+
+Backend: Python, Django
+
+Database: MySQL / PostgreSQL
+
+Frontend: HTML, CSS, JavaScript (Django templates)
+
+Tools: Django ORM, Admin Panel, Pip
+
+How to Run:
+
+Install dependencies → pip install -r requirements.txt
+
+Apply migrations → python manage.py makemigrations && python manage.py migrate
+
+Create a superuser → python manage.py createsuperuser
+
+Run the server → python manage.py runserver
